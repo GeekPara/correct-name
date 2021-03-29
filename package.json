@@ -1,0 +1,12 @@
+{
+  "name": "correct-name",
+  "version": "0.1",
+  "description": "把名字写对，是对人最起码的尊重。",
+  "main": "index.js",
+  "author": "JupiterJun",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^8.0.0",
+    "pyfl": "^1.1.4"
+  }
+}
