@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const pyfl = require('pyfl').default;
 const inquirer = require('inquirer');
 const fs = require('fs');
