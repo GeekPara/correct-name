@@ -5,8 +5,14 @@
   "main": "index.js",
   "author": "JupiterJun",
   "license": "MIT",
+  "bin": {
+    "correct-name": "index.js"
+  },
   "dependencies": {
+    "colors": "^1.4.0",
+    "iconv-lite": "^0.6.2",
     "inquirer": "^8.0.0",
+    "lowdb": "^1.0.0",
     "pyfl": "^1.1.4"
   }
 }
