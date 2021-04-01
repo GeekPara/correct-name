@@ -29,7 +29,7 @@ const db = low(adapter);
         };
         if (input.name == 'generate') {
             generateDb();
-            break;
+            continue;
         };
         let queryPy = input.name.toLocaleUpperCase();
         let resultList = db.get('names').filter({ Pinyin: queryPy }).map('Name').value();
@@ -39,7 +39,7 @@ const db = low(adapter);
                 print('No name matched'.yellow);
                 break;
             case 1:
-                exec('clip').stdin.end(iconv.encode(resultList[0], 'gbk'));
+                copy(resultList[0]);
                 print(resultList[0]);
                 print('Copied!'.green);
                 break;
@@ -49,9 +49,9 @@ const db = low(adapter);
                     message: 'Choose a name',
                     name: 'name',
                     choices: resultList,
-                }])
-                exec('clip').stdin.end(iconv.encode(selected.name, 'gbk'));
-                print('Copied!'.green)
+                }]);
+                copy(selected.name);
+                print('Copied!'.green);
         }
     }
 
@@ -75,7 +75,12 @@ function byLine(string) {
 }
 
 function generateDb() {
-    let namelist = byLine(fs.readFileSync('namelist.txt', { encoding: 'utf8' }));
+    let namelist = []
+    try {
+        namelist = byLine(fs.readFileSync('namelist.txt', { encoding: 'utf8' }));
+    } catch (error) {
+        fs.writeFileSync('namelist.txt','\n');
+    }
     if (namelist.length != 0) {
         var namepy = []
         for (i of namelist) namepy.push({ Name: i, Pinyin: pyfl(i) });
@@ -83,4 +88,8 @@ function generateDb() {
         print('Generate database successed! Now you can use it!'.green)
     }
     else print('Please put some names in "namelist.txt". One line one name.\nThen enter "generate" to generate a database to use.'.red);
+}
+
+function copy(text) {
+    exec('clip').stdin.end(iconv.encode(text, 'gbk'));
 }

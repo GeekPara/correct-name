@@ -1,6 +1,6 @@
 {
   "name": "correct-name",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "把名字写对，是对人最起码的尊重。",
   "main": "index.js",
   "author": "JupiterJun",
