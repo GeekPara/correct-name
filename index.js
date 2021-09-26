@@ -31,12 +31,12 @@ const print = console.log;
       },
     ]);
 
-    if (input.name == ':E') {
+    if (input.name == ':e') {
       db.set('names', []).write();
       print('Bye!');
       break;
     }
-    if (input.name == ':G') {
+    if (input.name == ':g') {
       generateDb();
       continue;
     }
