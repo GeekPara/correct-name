@@ -15,7 +15,7 @@ const print = console.log;
 // 程序主入口
 (async function () {
     // 欢迎和初始化数据库
-    print('Hello there, enter "exit" to exit.');
+    print('Hello there, enter ":E" to exit.');
     generateDb();
 
     // 循环体
@@ -28,12 +28,12 @@ const print = console.log;
             suffix: ' >',
             filter: a => a.toLocaleUpperCase()
         }])
-        if (input.name == 'exit') {
+        if (input.name == ':E') {
             db.set('names', []).write();
             print('Bye!');
             break;
         };
-        if (input.name == 'generate') {
+        if (input.name == ':G') {
             generateDb();
             continue;
         };
@@ -90,7 +90,7 @@ function generateDb() {
         db.set('names', namepy).write();
         print('Generate database successed! Now you can use it!'.green)
     }
-    else print('Please put some names in "namelist.txt". One line one name.\nThen enter "generate" to generate a database to use.'.red);
+    else print('Please put some names in "namelist.txt". One line one name.\nThen enter ":G" to generate a database to use.'.red);
 }
 
 // 针对不同平台的复制函数
