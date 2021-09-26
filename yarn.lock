@@ -1571,11 +1571,6 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
-pyfl@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.npm.taobao.org/pyfl/download/pyfl-1.1.4.tgz#0b5fedade2fdf4b58a8806cf33618fe9242e5c92"
-  integrity sha1-C1/treL99LWKiAbPM2GP6SQuXJI=
-
 read-pkg-up@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"

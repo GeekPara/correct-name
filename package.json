@@ -5,6 +5,7 @@
   "main": "index.js",
   "author": "JupiterJun",
   "license": "MIT",
+  "type": "module",
   "pkg": {
     "scripts": "index.js",
     "targets": [
@@ -22,7 +23,6 @@
     "iconv-lite": "^0.6.2",
     "inquirer": "^8.0.0",
     "lowdb": "^1.0.0",
-    "pinyin": "^2.10.2",
-    "pyfl": "^1.1.4"
+    "pinyin": "^2.10.2"
   }
 }
