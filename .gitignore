@@ -1,3 +1,4 @@
 node_modules
 bin
-school-namelist.txt
+namelist.txt
+db.json

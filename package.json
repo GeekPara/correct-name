@@ -7,11 +7,14 @@
   "license": "MIT",
   "pkg": {
     "scripts": "index.js",
-    "targets": [ "node13-win-x64","node13-win-x86" ],
+    "targets": [
+      "node13-win-x64",
+      "node13-win-x86"
+    ],
     "outputPath": "bin"
   },
-  "bin":{
-    "correct-name":"index.js"
+  "bin": {
+    "correct-name": "index.js"
   },
   "dependencies": {
     "colors": "^1.4.0",
@@ -19,6 +22,7 @@
     "iconv-lite": "^0.6.2",
     "inquirer": "^8.0.0",
     "lowdb": "^1.0.0",
+    "pinyin": "^2.10.2",
     "pyfl": "^1.1.4"
   }
 }
