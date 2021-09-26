@@ -6,13 +6,6 @@
   "author": "JupiterJun",
   "license": "MIT",
   "type": "module",
-  "pkg": {
-    "scripts": "index.js",
-    "targets": [
-      "node14-win-x64"
-    ],
-    "outputPath": "bin"
-  },
   "bin": {
     "correct-name": "index.js"
   },
