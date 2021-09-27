@@ -1,4 +1,6 @@
 node_modules
 bin
+dist
 namelist.txt
+namelist
 db.json

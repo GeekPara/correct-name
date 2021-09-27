@@ -1,6 +1,6 @@
 {
   "name": "correct-name",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "把名字写对，是对人最起码的尊重。",
   "main": "index.js",
   "author": "JupiterJun",
@@ -9,6 +9,9 @@
   "bin": {
     "correct-name": "index.js"
   },
+  "scripts": {
+    "build": "webpack"
+  },
   "dependencies": {
     "colors": "^1.4.0",
     "gulp-cli": "^2.3.0",
@@ -16,5 +19,11 @@
     "inquirer": "^8.0.0",
     "lowdb": "^1.0.0",
     "pinyin": "^2.10.2"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "webpack": "^5.54.0",
+    "webpack-cli": "^4.8.0"
   }
 }

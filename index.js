@@ -1,11 +1,11 @@
 import pinyin from 'pinyin';
 import inquirer from 'inquirer';
 import { readFileSync, writeFileSync } from 'fs';
-import 'colors';
 import { exec } from 'child_process';
 import iconv from 'iconv-lite';
 import low from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync.js';
+import msg from './message.js'
 
 const adapter = new FileSync('db.json');
 const db = low(adapter);
@@ -14,8 +14,8 @@ const print = console.log;
 // 程序主入口
 (async function () {
   // 欢迎和初始化数据库
-  print('Corrtct Name v0.2.0 by JupiterJun'.blue.bold);
-  print('Hello there, enter ":e" to exit.');
+  print(msg.title);
+  print(msg.greet);
   generateDb();
 
   // 循环体
@@ -33,11 +33,15 @@ const print = console.log;
 
     if (input.name == ':e') {
       db.set('names', []).write();
-      print('Bye!');
+      print(msg.bye);
       break;
     }
     if (input.name == ':g') {
       generateDb();
+      continue;
+    }
+    if (input.name == ':h') {
+      print(msg.help)
       continue;
     }
 
@@ -45,7 +49,7 @@ const print = console.log;
 
     switch (resultList.length) {
       case 0:
-        print('No name matched'.yellow);
+        print(msg.noNameMatched);
         break;
       case 1:
         copy(resultList[0]);
@@ -56,18 +60,18 @@ const print = console.log;
         let selected = await inquirer.prompt([
           {
             type: 'list',
-            message: 'Choose a name',
+            message: msg.chooseName,
             name: 'name',
             choices: resultList,
           },
         ]);
         copy(selected.name);
-        print('Copied!'.green);
+        print(msg.copied);
     }
   }
 })();
 
-// 将“\n”换成真正的换行符
+// 逐行读取文件到数组
 function byLine(string) {
   let i = 0;
   let arr = [];
@@ -96,12 +100,9 @@ function generateDb() {
     var namepy = [];
     for (let i of namelist) namepy.push({ Name: i, Pinyin: generatePy(i) });
     db.set('names', namepy).write();
-    print('Generate database successed! Now you can use it!'.green);
+    print(msg.dbSuccess);
   } else
-    print(
-      'Please put some names in "namelist.txt". One line one name.\nThen enter ":g" to generate a database to use.'
-        .red
-    );
+    print(msg.dbFaild);
 }
 
 // 针对不同平台的复制函数
