@@ -1,5 +1,15 @@
 # Correct Name: 好好打名字！
 
+## 归档说明
+
+该项目已经不再更新，并且将在以下新项目完工后正式归档。目前此项目被分为了三个子项目：
+
+ - correct-name-core：一个node包，提供correct-name的基本方法的封装和API
+ - correct-name-cli：一个npm的bin程序，提供命令行的correct-name功能
+ - correct-name-gui：一个Electron应用，提供美观易用的用户界面的correct-name功能
+
+## 原介绍
+
 *把名字写对，是对人最起码的尊重。*
 
  - 安装此包。
