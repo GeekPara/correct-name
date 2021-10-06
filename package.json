@@ -10,20 +10,16 @@
     "correct-name": "index.js"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "node build.js"
   },
   "dependencies": {
     "colors": "^1.4.0",
-    "gulp-cli": "^2.3.0",
     "iconv-lite": "^0.6.2",
     "inquirer": "^8.0.0",
     "lowdb": "^1.0.0",
     "pinyin": "^2.10.2"
   },
   "devDependencies": {
-    "file-loader": "^6.2.0",
-    "html-loader": "^2.1.2",
-    "webpack": "^5.54.0",
-    "webpack-cli": "^4.8.0"
+    "esbuild": "^0.13.4"
   }
 }
