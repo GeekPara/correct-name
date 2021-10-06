@@ -4,9 +4,9 @@
 
 该项目已经不再更新，并且将在以下新项目完工后正式归档。目前此项目被分为了三个子项目：
 
- - correct-name-core：一个node包，提供correct-name的基本方法的封装和API
- - correct-name-cli：一个npm的bin程序，提供命令行的correct-name功能
- - correct-name-gui：一个Electron应用，提供美观易用的用户界面的correct-name功能
+ - correct-name-core：一个 node 包，提供 correct-name 的基本方法的封装和 API
+ - correct-name-cli：一个 npm 的 bin 程序，提供命令行的 correct-name 功能
+ - correct-name-gui：一个桌面端 Electron 应用，提供美观易用的用户界面的 correct-name 功能
 
 ## 原介绍
 
@@ -19,6 +19,4 @@
  - 程序将自动查找人名，并供你选择，使用上下方向键来选择名字，使用回车来选择名字。
  - 支持多音字姓名，输入任何一个音都可以查到名字，还支持模糊查询。
  - 程序会自动将名字复制到剪贴板。
- - 将程序命令行窗口和待录入区域同时打开，使用Alt+Tab来切换窗口，可以很方便的批量输入人名。
-
-*程序自带的“namelist.txt”中的人名全部为随机生成的，并没有侵犯任何人的隐私。*
+ - 将程序命令行窗口和待录入区域同时打开，使用 `Alt+Tab` 来切换窗口，可以很方便的批量输入人名。
